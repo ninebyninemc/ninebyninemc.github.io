@@ -1,0 +1,13 @@
+body {
+  background:;
+  overflow: hidden;
+}
+
+img {
+  display: none;
+}
+
+@font-face {
+  font-family: Wisdom;
+  src: url("http://ninebyninemc.github.io/fonts/Wisdom.otf");
+}
