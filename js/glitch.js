@@ -31,18 +31,18 @@ var glitcher = {
 		
 		this.fps = 60;
 		
-		this.channel = 0; // 0 = red, 1 = green, 2 = blue
+		this.channel = 1; // 0 = red, 1 = green, 2 = blue
 		this.compOp = 'lighter'; // CompositeOperation = lighter || darker || xor
 		
 		this.phase = 0.0;
 		this.phaseStep = 0.05; //determines how often we will change channel and amplitude
 		this.amplitude = 0.0;
-		this.amplitudeBase  = 2.0;
-		this.amplitudeRange = 2.0;
+		this.amplitudeBase  = 1.4;
+		this.amplitudeRange = 1.4;
 		this.alphaMin = 0.8;
 		
-		this.glitchAmplitude = 20.0;
-		this.glitchThreshold = 0.9; 
+		this.glitchAmplitude = 7.0;
+		this.glitchThreshold = 1.0; 
 		this.scanlineBase = 40;
 		this.scanlineRange = 40;
 		this.scanlineShift = 15;
