@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Nine By Nine | Coming Soon</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="site-wrapper tv">
+		  <div class="screen mute" id="tv" style="z-index:-1;"></div>
+    <div class="overlay"></div>
+
+    <div class="site-wrapper-inner">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="https://www.facebook.com/NinebyNine.MC/"><i class="fa fa-facebook fa-fw"></i></a></li>
+                            <li><a href="mailto:contact@ninebynine.tk"><i class="fa fa-envelope fa-fw"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="cover-container">
+            <div class="inner cover">
+                <h1 class="cover-heading" style="font-family:Wisdom;">Nine By Nine</h1><br>
+                <p class="lead">We are in the process of relaunching the FTB server known as Nine By Nine. We will be using the modpack <a href="http://www.feed-the-beast.com/projects/ftb-infinity-evolved" class="hvr-grow">"FTB Infinity Evolved"</a>. Follow our <a href="https://www.facebook.com/NinebyNine.MC/"><i class="fa fa-facebook fa-fw"></i></a> for updates. If you would like to apply to be on our staff, then click the button below.</p>
+                <p class="lead"><a href="application.html" class="btn btn-lg btn-default">Staff Application</a></p>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Copyright &copy; 2016, NINE BY NINE MINECRAFT | DESIGN BY: BIOCONE<br>| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!-- Plugins and Custom JavaScript -->
+<script src="js/device.min.js"></script>
+<script src="js/jquery.mb.YTPlayer.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+var tag = document.createElement('script');
+		tag.src = 'https://www.youtube.com/player_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var tv,
+		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
+var vid = [
+			{'videoId': 'AO6RpX3SGLc', 'startSeconds': 0, 'endSeconds': 25, 'suggestedQuality': 'fhd1080'},
+		],
+		randomvid = Math.floor(Math.random() * (vid.length - 1 + 1));
+
+function onYouTubePlayerAPIReady(){
+  tv = new YT.Player('tv', {events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}, playerVars: playerDefaults});
+}
+
+function onPlayerReady(){
+  tv.loadVideoById(vid[randomvid]);
+  tv.mute();
+}
+
+function onPlayerStateChange(e) {
+  if (e.data === 1){
+    $('#tv').addClass('active');
+  } else if (e.data === 0){
+    tv.seekTo(vid[randomvid].startSeconds)
+  }
+}
+
+function vidRescale(){
+
+  var w = $(window).width()+200,
+    h = $(window).height()+200;
+
+  if (w/h > 16/9){
+    tv.setSize(w, w/16*9);
+    $('.tv .screen').css({'left': '0px'});
+  } else {
+    tv.setSize(h/9*16, h);
+    $('.tv .screen').css({'left': -($('.tv .screen').outerWidth()-w)/2});
+  }
+}
+
+$(window).on('load resize', function(){
+  vidRescale();
+});
+
+$('.hi span').on('click', function(){
+  $('#tv').toggleClass('mute');
+  if($('#tv').hasClass('mute')){
+    tv.mute();
+  } else {
+    tv.unMute();
+  }
+});
+</script>
+    
+    
+</body>
+</html>
