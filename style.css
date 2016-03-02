@@ -1,3 +1,70 @@
+/* Cool infinite background scrolling animation.
+ * Twitter: @fkoutoupas
+ */
+/* Exo thin font from Google. */
+@import url(http://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: http://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  color: #999;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 1s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 1s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 1s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 1s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
 /*!
  * forbetterweb.com - Classic Cover – One Page Websites (html, bootstrap)
  */
@@ -26,7 +93,7 @@ a:hover {
   color: #fff;
   text-shadow: none;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #999;
   border-radius: 2px;
 }
 
@@ -41,9 +108,9 @@ body {
 }
 body {
   font-family: Roboto, sans-serif;
-  color: #fff;
+  color: #999;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -184,7 +251,11 @@ body {
 .cover-heading {
   font-family: "Wisdom";
   font-size: 60px;
+}
 
+.parag {
+  font-weight:600;
+    font-size:1.5em;
 }
 
 small {
@@ -197,7 +268,7 @@ small {
 
 .mastfoot {
   color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  
 }
 
 @media (min-width: 768px) {
