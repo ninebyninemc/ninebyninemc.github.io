@@ -1,73 +1,10 @@
-/* Cool infinite background scrolling animation.
- * Twitter: @fkoutoupas
- */
-/* Exo thin font from Google. */
-@import url(http://fonts.googleapis.com/css?family=Exo:100);
-/* Background data (Original source: http://subtlepatterns.com/grid-me/) */
-/* Animations */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
+/* ---- particles.js container ---- */
+#canv {
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  margin-bottom: 0;
 }
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-/* Main styles */
-body {
-  color: #999;
-  /* img size is 50x50 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 1s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 1s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 1s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 1s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-
-
-/*!
- * forbetterweb.com - Classic Cover – One Page Websites (html, bootstrap)
- */
 
 /* Links */
 a,
@@ -93,7 +30,7 @@ a:hover {
   color: #fff;
   text-shadow: none;
   background-color: transparent;
-  border: 1px solid #999;
+  border: 1px solid #ffffff;
   border-radius: 2px;
 }
 
@@ -104,11 +41,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #000;
+  background-image: radial-gradient(ellipse farthest-corner at center top, hsla(230, 100%, 15%, 1) 0%, hsla(231, 90%, 1%, 1) 100%);
+overflow: hidden;
 }
 body {
   font-family: Roboto, sans-serif;
-  color: #999;
+  color: #ffffff;
   text-align: center;
   
 }
