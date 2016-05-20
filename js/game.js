@@ -1,4 +1,5 @@
 //Vanilla JS
+//This was ripped straight from codepen and slightly edited, credit goes to Loopez10 of codepen.io
 
 //PLAY IN FULL PAGE VIEW!
 
