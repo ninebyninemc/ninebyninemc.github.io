@@ -27,6 +27,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script type="text/javascript">
   <!--
   if (screen.width <= 800) {
@@ -37,7 +38,14 @@
 </head>
 
 <body>
-
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <iframe src="game.html" width="100%" height="800px" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+</div>
+    
 <div class="site-wrapper" >
 <canvas id="canv" class="hidden-xs hidden-sm"></canvas>
     <div class="site-wrapper-inner">
@@ -56,14 +64,55 @@
             <div class="cover-container">
             <div class="inner cover">
                 <h1 class="cover-heading" style="font-size:8.5em;font-family:Wisdom;">Nine by Nine</h1>
-                <br><p style="letter-spacing: 4px;font-size:2em;font-family:Roboto, Helvetica, Arial, sans-serif;">THE MOST SYMMETRICAL FTB SERVER...</p><br><br><br>
+                <br><p style="letter-spacing: 4px;font-size:2em;font-family:Roboto, Helvetica, Arial, sans-serif;">THE MOST SYMMETRICAL FTB SERVER...</p>
+
+<style>ul#exaample {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+ul#exaample li { display: inline-block; }
+
+ul#exaample li span {
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+ul#exaample li.seperator {
+  font-size: 80px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+ul#exaample li p {
+  color: #a7abb1;
+  font-size: 25px;
+}
+</style>
+<br><br><br>
+<!-- COUNTDOWN TIMER, HIDDEN FOR NOW...
+<div id="bigbox">
+    <ul id="exaample">
+	  <li><span class="days">00</span><p class="days_text">Days</p></li>
+		<li class="seperator">:</li>
+		<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+		<li class="seperator">:</li>
+		<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+		<li class="seperator">:</li>
+		<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li><br><font color="darkgray">This time is subject to change, we have not set it in stone, it is just a rough estimate...</font>
+	</ul></div> 
+-->
                 <p class="parag">We are in the process of relaunching the FTB server known as Nine By Nine. We will be using the modpack <a href="http://www.feed-the-beast.com/projects/ftb-infinity-evolved" class="hvr-grow" style="color:#ffffff;" target="_blank" style="target-new: tab;">"FTB Infinity Evolved"</a>. Follow our <a href="http://www.facebook.com/NinebyNine.MC/" target="_blank" style="target-new: tab;"><i class="fa fa-facebook fa-fw" style="color:#ffffff;"></i></a> for updates. If you would like to apply to be on our staff, then click the button below.</p>
                 <p class="lead"><a href="http://ninebynine.tk/application" class="btn btn-lg btn-default" style="color:#ffffff;" target="_blank" style="target-new: tab;">Staff Application</a></p>
             </div>
 
             <div class="mastfoot">
                 <div class="inner">
-                    <p>Copyright &copy; 2016, NINE BY NINE MINECRAFT | DESIGN BY: BIOCONE<br>| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
+                    <p>Copyright &copy; 2016, NINE BY NINE MINECRAFT | DESIGN BY: BIOCONE<br>| SPECIAL THANKS TO <a data-toggle="modal" data-target=".bs-example-modal-lg"><font color="#999">ALEXBEGT</font></a>, HE BRINGS THE DANK MEMES |</p>
                 </div>
             </div>
 
@@ -80,9 +129,19 @@
 
 <!-- Plugins and Custom JavaScript -->
 <script src="js/device.min.js"></script>
-<script src="js/jquery.mb.YTPlayer.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/stars.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+		$('#exaample').countdown({
+			date: '6/10/2016 22:00:00',
+			offset: -4,
+			day: 'Day',
+			days: 'Days'
+		}, function () {
+			document.querySelector('#bigbox').innerHTML = '<br><br>';
+		});
+	</script>
 
    <!-- <div id="particles-js"></div>
     <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
