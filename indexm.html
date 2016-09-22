@@ -27,6 +27,9 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.0/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
 </head>
 
 <body>
@@ -89,8 +92,12 @@ ul#exaample li p {
 		<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li><br><font color="darkgray">This time is subject to change, and delays may occur...</font>
 	</ul></div> 
 
-                <p class="parag">We are in the process of relaunching the modded server known as Nine By Nine. We will be using the modpack <a href="https://minecraft.curseforge.com/projects/all-the-mods-lite" class="hvr-grow" style="color:#ffffff;" target="_blank" style="target-new: tab;">"All The Mods Lite" Version 0.9</a>. Follow our <a href="http://www.facebook.com/NinebyNine.MC/" target="_blank" style="target-new: tab;"><i class="fa fa-facebook fa-fw" style="color:#ffffff;"></i></a> for updates. If you would like to apply to be on our staff, then click the button below.<br><br>Our Server's IP Address is play.ninebynine.tk</p>
-                <p class="lead"><a href="http://ninebynine.tk/application" class="btn btn-lg btn-default" style="color:#ffffff;" target="_blank" style="target-new: tab;">Staff Application</a></p>
+        <div id="team-rbi">
+            <script id="team-rbi-template" type="text/x-handlebars-template"> 
+                <p class="parag">We are in the process of relaunching the modded server known as Nine By Nine. We will be using the modpack <a href="https://minecraft.curseforge.com/projects/all-the-mods-lite" class="hvr-grow" style="color:#ffffff;" target="_blank" style="target-new: tab;">"All The Mods Lite" Version {{cells.TeamName}}</a>. Follow our <a href="http://www.facebook.com/NinebyNine.MC/" target="_blank" style="target-new: tab;"><i class="fa fa-facebook fa-fw" style="color:#ffffff;"></i></a> for updates. If you would like to apply to be on our staff, then click the button below.<br><br>Our Server's IP Address is play.ninebynine.tk</p>
+            </script>
+        </div>
+            <p class="lead"><a href="http://ninebynine.tk/application" class="btn btn-lg btn-default" style="color:#ffffff;" target="_blank" style="target-new: tab;">Staff Application</a></p>
             </div>
 
             <div class="mastfoot">
@@ -103,7 +110,29 @@ ul#exaample li p {
 
     </div>
 </div>
+<script>
+// Sheetrock.js 1.0 Example 4
+// https://chriszarate.github.io/sheetrock/
 
+// Let’s group some data. For a more straightforward template, we’ll 
+// specify the labels we want Sheetrock to use when it returns the 
+// data using the labels option.
+
+// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
+
+// Compile Handlebars template for team RBI leaders.
+var RBITemplate = Handlebars.compile($('#team-rbi-template').html());
+
+// Load top five team RBI leaders.
+$('#team-rbi').sheetrock({
+  url: mySpreadsheet,
+  sql: "select C",
+  chunkSize: 1,
+  labels: ['TeamName'],
+  rowHandler: RBITemplate
+});
+</script>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -117,7 +146,7 @@ ul#exaample li p {
 <script src="js/jquery.countdown.min.js"></script>
 <script type="text/javascript">
 		$('#exaample').countdown({
-			date: '09/22/2016 00:00:00',
+			date: '09/23/2016 00:00:00',
 			offset: -4,
 			day: 'Day',
 			days: 'Days'
