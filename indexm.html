@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Disable Browser Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- /Disable Browser Caching -->
+    
+    <title>Nine By Nine | Coming Soon</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.0/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+</head>
+
+<body>
+
+<div class="site-wrapper" >
+    <div class="site-wrapper-inner">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="http://www.facebook.com/NinebyNine.MC/" target="_blank" style="target-new: tab;"><i class="fa fa-facebook fa-fw" style="color:#ffffff;"></i></a></li>
+                            <li><a href="mailto:contact@ninebynine.tk"><i class="fa fa-envelope fa-fw" style="color:#ffffff;"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="cover-container">
+            <div class="inner cover">
+                <h1 class="cover-heading" style="font-size:8.5em;font-family:Wisdom;">Nine by Nine</h1>
+                <br><p style="letter-spacing: 4px;font-size:1.5em;font-family:Roboto, Helvetica, Arial, sans-serif;">THE MOST SYMMETRICAL MINECRAFT SERVER...</p>
+<style>ul#exaample {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+ul#exaample li { display: inline-block; }
+
+ul#exaample li span {
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+ul#exaample li.seperator {
+  font-size: 80px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+ul#exaample li p {
+  color: #a7abb1;
+  font-size: 25px;
+}
+</style>
+<br><br><br>
+<div id="bigbox">
+    <p class="parag">We will be open to the public in...</p>
+    <ul id="exaample">
+	  <li><span class="days">00</span><p class="days_text">Days</p></li>
+		<li class="seperator">:</li>
+		<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+		<li class="seperator">:</li>
+		<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+		<li class="seperator">:</li>
+		<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li><br><font color="darkgray">This time is subject to change, and delays may occur...</font>
+	</ul></div> 
+
+        <div id="team-rbi">
+            <script id="team-rbi-template" type="text/x-handlebars-template"> 
+                <p class="parag">We are in the process of relaunching the modded server known as Nine By Nine. We will be using the modpack <a href="https://minecraft.curseforge.com/projects/all-the-mods-lite" class="hvr-grow" style="color:#ffffff;" target="_blank" style="target-new: tab;">"All The Mods Lite" Version {{cells.TeamName}}</a>. Follow our <a href="http://www.facebook.com/NinebyNine.MC/" target="_blank" style="target-new: tab;"><i class="fa fa-facebook fa-fw" style="color:#ffffff;"></i></a> for updates. If you would like to apply to be on our staff, then click the button below.<br><br>Our Server's IP Address is play.ninebynine.tk</p>
+            </script>
+        </div>
+            <p class="lead"><a href="http://ninebynine.tk/application" class="btn btn-lg btn-default" style="color:#ffffff;" target="_blank" style="target-new: tab;">Staff Application</a></p>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Copyright &copy; 2016, NINE BY NINE MINECRAFT | DESIGN BY: BIOCONE<br>| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script>
+// Sheetrock.js 1.0 Example 4
+// https://chriszarate.github.io/sheetrock/
+
+// Let’s group some data. For a more straightforward template, we’ll 
+// specify the labels we want Sheetrock to use when it returns the 
+// data using the labels option.
+
+// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
+
+// Compile Handlebars template for team RBI leaders.
+var RBITemplate = Handlebars.compile($('#team-rbi-template').html());
+
+// Load top five team RBI leaders.
+$('#team-rbi').sheetrock({
+  url: mySpreadsheet,
+  sql: "select C",
+  chunkSize: 1,
+  labels: ['TeamName'],
+  rowHandler: RBITemplate
+});
+</script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!-- Plugins and Custom JavaScript -->
+<script src="js/device.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+		$('#exaample').countdown({
+			date: '09/25/2016 21:00:00',
+			offset: -4,
+			day: 'Day',
+			days: 'Days'
+		}, function () {
+			window.location = "https://ninebynine.tk/site/index.html";
+		});
+</script>
+    
+   <!-- <div id="particles-js"></div>
+    <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script>
+      particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 1
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.9,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 2,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200,
+        "rotateZ": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script> -->
+</body>
+</html>
