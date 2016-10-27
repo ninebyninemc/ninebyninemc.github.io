@@ -1,4 +1,4 @@
-// PRELOADER STUFF
+/* PRELOADER DISABLED
 var tl = new TimelineMax({
   repeat: -1
 });
@@ -26,4 +26,4 @@ window.addEventListener('load', function(){
   overlay.style.display = 'none';
 }, 1000);
 });
-// END OF PRELOADER STUFF
+// END OF PRELOADER STUFF */

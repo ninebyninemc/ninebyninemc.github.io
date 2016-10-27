@@ -78,6 +78,8 @@
  visibility: hidden;
 height: 0;
 }
+
+/* PRELOADER DISABLED
 .wrapper{
   position: fixed;
   background: #263238;
@@ -97,4 +99,5 @@ height: 0;
   width: 150px;
   z-index: 1001;
   overflow: hidden;
-}
+} */
+
