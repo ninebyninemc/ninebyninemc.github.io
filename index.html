@@ -127,7 +127,7 @@
             </div>
             <br> </div>
         <div class="container center">
-            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright (c) 2016, NINE BY NINE MINECRAFT | DESIGN BY: BIOCONE</p>
+            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright (c) 2016, NINE BY NINE MINECRAFT | DESIGN BY: <a style="color:#fff;" href="https://specx.tech/">BIOCONE</a></p>
             <p class="white-text" style="font-size:14pt;">| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
             <br> </div>
     </footer>
@@ -185,11 +185,11 @@
         });
     </script>
     <script>
-        MinecraftAPI.getServerStatus('eternity.ninebynine.us', {
+        MinecraftAPI.getServerStatus('infinity.ninebynine.us', {
             port: 25565 // optional, only if you need a custom port
         }, function (err, status) {
             if (err) {
-                return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                return document.querySelector('.server-status1').innerHTML = 'Error loading status';
             }
             document.querySelector('.server-online1').innerHTML = status.online ? '<div class="" style="background-color:#006600;"><div style="padding:2px;background-color:#006600;"><h4 class="">Online</h4></div></div>' : '<div class="" style="padding:2px;background-color:#cc0000;"><div class=""><h4 class="">Offline</h4></div></div>';
             document.querySelector('.server-players1').innerHTML = status.players.now;
