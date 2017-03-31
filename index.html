@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/javascript">
-    //<![CDATA[ 
-    var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
-    document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-    //]]>
-</script>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <link rel="shortcut icon" href="images/squarelogonobg.png" type="image/x-icon">
-    <meta name="Description" content="Nine By Nine, The Most Symmetrical Five Reborn Server">
+    <meta name="Description" content="Nine By Nine, The Most Symmetrical Minecraft Server">
     <meta name="Keywords" content="minecraft, server, ninebynine, NinebyNine, NineByNine, 9x9, 9X9, all, the, mods, lite, 1.10.2, atml, ATML, All The Mods Lite, all the mods lite, fun, games, pc, community, forum, discord">
     <!-- Disable Browser Caching -->
     <meta http-equiv="cache-control" content="max-age=0" />
@@ -21,7 +15,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <!-- /Disable Browser Caching -->
     <meta property="og:image" content="https://ninebynine.us/images/squarelogo.png" />
-    <meta property="og:description" content="The Most Symmetrical Five Reborn Server" />
+    <meta property="og:description" content="The Most Symmetrical Minecraft Server" />
     <meta property="og:url" content="https://ninebynine.us/" />
     <meta property="og:title" content="Nine By Nine" />
     <title>Nine By Nine | Home</title>
@@ -49,16 +43,24 @@
                 <ul class="right hide-on-med-and-down"> <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> </ul>
                 <ul id="nav-mobile" class="side-nav blue-grey darken-4">
                     <li class=""><a class="white-text" href="index.html">HOME</a></li>
-                    <!--<li class=""><a class="white-text" href="features.html">FEATURES</a></li>
+                    <li class=""><a class="white-text" href="features.html">FEATURES</a></li>
                     <li class=""><a class="white-text" href="store.html">STORE</a></li>
-                    <li class=""><a class="white-text" href="about.html">ABOUT</a></li>-->
-                    <li class=""><a class="white-text" href="apply.html">POLICE APPLICATION</a></li>
+                    <li class=""><a class="white-text" href="about.html">ABOUT</a></li>
+                    <li class=""><a class="white-text" href="apply.html">STAFF APPLICATION</a></li>
                     <li class=""><a class="white-text" href="https://discord.gg/0vMe9gYhyiE7Nz18">JOIN OUR DISCORD</a></li>
                     <li class=""><a class="white-text" href="howto.html">HOW TO PLAY</a></li>
                     <li class=""><a class="white-text" href="contact.html">CONTACT</a></li>
                 </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> </div>
         </nav>
+        <div style="width:100%; position:absolute; z-index:0; overflow:hidden;" id="canvas"></div>
         <div style="height:100vh;" class="section blue-grey darken-4 no-pad-bot" id="index-banner">
+            <script id="vertexShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { vNormal = normalize( normalMatrix * normal ); gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); } </script>
+            <script id="fragmentShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 4.0 ); gl_FragColor = vec4( 0.0, 0.3, 1.0, 1.0 ) * intensity; } </script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/lib/alea.js'></script>
+            <script src='https://codepen.io/clindsey/pen/egQpvE.js'></script>
+            <script src='https://cdn.rawgit.com/jwagner/simplex-noise.js/87440528bcf8ec89840e974d8f76cfe3da548c37/simplex-noise.min.js'></script>
+            <script src="js/pixelearth.js"></script>
             <div style="position: relative;
   top: 50%;
   transform: translateY(-50%);">
@@ -74,8 +76,11 @@
                     <br class="show-on-large hide-on-med-and-down">
                     <hr>
                     <div class="row center">
-                        <div id="">
-                            <h4 class="show-on-large hide-on-med-and-down white-text"><br><br>The Most Symmetrical Five Reborn Server</h4> </div>
+                        <div id="team-rbi2">
+                            <script id="team-rbi-template2" type="text/x-handlebars-template2">
+                                <h4 class="show-on-large hide-on-med-and-down white-text"><br><br>The Most Symmetrical Roleplay Server</h4>
+                                <h5 class="hide-on-large-only white-text"><br><br>The Most Symmetrical Roleplay Server</script>
+                        </div>
                     </div>
                     <br>
                     <div class="hide-on-med-and-down center"> <i class="bounce white-text fa-5x fa fa-angle-down"></i> </div>
@@ -87,57 +92,59 @@
         </div>
     </div>
     <div class="row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
-        <div class="col s12 m8 l8 offset-l2 offset-m2">
-            <h3 class="white-text center">Our TeamSpeak IP: ts.ninebynine.us</h3></div>
+        <div class="col s12 m8 l8 offset-l2 offset-m2"><h3 class="white-text center">Our TeamSpeak IP: <a class="white-text" href="ts3server://ts.ninebynine.us">ts.ninebynine.us</a><br><br>Our Discord Link: <a href="https://discord.gg/Vj3q6bP" class="white-text">https://discord.gg/Vj3q6bP</a></h3></div>
     </div>
     <footer class="page-footer blue-grey darken-4">
         <div align="center" class="">
             <h4 class="white-text">Find Us On</h4>
             <div class="row"> <a class="" title="Facebook" target="_blank" href="https://www.facebook.com/ninebynineus/"><i style="font-size:;padding:0px;" class="white-text fa-4x fa fa-facebook"></i></a>
-                <a class="" title="Discord" target="_blank" href="https://discord.gg/0vMe9gYhyiE7Nz18"><img width="75px" style="margin-bottom:-17px;" src="https://discordapp.com/assets/28174a34e77bb5e5310ced9f95cb480b.png"></a>
+                <a class="" title="Discord" target="_blank" href="https://discord.gg/Vj3q6bP"><img width="75px" style="margin-bottom:-17px;" src="https://discordapp.com/assets/28174a34e77bb5e5310ced9f95cb480b.png"></a>
             </div>
             <br> </div>
         <div class="container center">
             <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright (c) 2016, NINE BY NINE ROLEPLAY | DESIGN BY: JACK MACTAVISH</p>
             <p class="white-text" style="font-size:14pt;">| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
-            <p>
-                <div class="row">
-                    <div align="right" class="col s6 m6 l6">
-                        <script language="JavaScript" type="text/javascript">
-                            TrustLogo("https://ninebynine.us/images/comodo_secure_seal_76x26_transp.png", "CL1", "none");
-                        </script>
-                    </div>
-                    <div align="left" class="col s6 m6 l6">
-                        <script data-cfbadgetype="g" data-cfbadgeskin="gray" type="text/javascript">
-                            //<![CDATA[
-                            try {
-                                window.CloudFlare || function () {
-                                    var a = window.document
-                                        , b = a.createElement("script")
-                                        , a = a.getElementsByTagName("script")[0];
-                                    window.CloudFlare = [];
-                                    b.type = "text/javascript";
-                                    b.async = !0;
-                                    b.src = "//ajax.cloudflare.com/cdn-cgi/nexp/cloudflare.js";
-                                    a.parentNode.insertBefore(b, a)
-                                }(), CloudFlare.push(function (a) {
-                                    a(["cloudflare/badge"])
-                                })
-                            }
-                            catch (e$$5) {
-                                try {
-                                    console.error("CloudFlare badge code could not be loaded. " + e$$5.message)
-                                }
-                                catch (e$$6) {}
-                            };
-                            //]]>
-                        </script>
-                    </div>
-                </div>
-            </p>
             <br> </div>
     </footer>
     <script src="js/preloader.js"></script>
+    <script>
+        // Sheetrock.js 1.0 Example 4
+        // https://chriszarate.github.io/sheetrock/
+        // Let’s group some data. For a more straightforward template, we’ll 
+        // specify the labels we want Sheetrock to use when it returns the 
+        // data using the labels option.
+        // Define spreadsheet URL.
+        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
+        // Compile Handlebars template for team RBI leaders.
+        var RBITemplate = Handlebars.compile($('#team-rbi-template').html());
+        // Load top five team RBI leaders.
+        $('#team-rbi').sheetrock({
+            url: mySpreadsheet
+            , sql: "select A"
+            , chunkSize: 1
+            , labels: ['TeamName']
+            , rowHandler: RBITemplate
+        });
+    </script>
+    <script>
+        // Sheetrock.js 1.0 Example 4
+        // https://chriszarate.github.io/sheetrock/
+        // Let’s group some data. For a more straightforward template, we’ll 
+        // specify the labels we want Sheetrock to use when it returns the 
+        // data using the labels option.
+        // Define spreadsheet URL.
+        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
+        // Compile Handlebars template for team RBI leaders.
+        var RBITemplate = Handlebars.compile($('#team-rbi-template2').html());
+        // Load top five team RBI leaders.
+        $('#team-rbi2').sheetrock({
+            url: mySpreadsheet
+            , sql: "select C"
+            , chunkSize: 1
+            , labels: ['TeamName2']
+            , rowHandler: RBITemplate
+        });
+    </script>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
