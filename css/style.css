@@ -585,3 +585,10 @@ canvas {
             transform: rotateX(30deg);
   }
 }
+
+.imagebackground {
+    background-color: black;
+    background-image: url(/images/loadscreen2.jpg);
+    background-size: cover;
+    opacity: 1;
+}
