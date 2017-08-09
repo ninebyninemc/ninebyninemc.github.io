@@ -26,7 +26,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="/js/motd-color.js"></script>
-    <link rel="stylesheet" href="css/font-awesome.min.css"> </head>
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
+    <script>
+      $(document).ready(function () {
+          // Hide the div
+          $("#div13").hide();
+          // Show the div after 5s
+          $("#div13").delay(7500).fadeIn(100);  
+      });    
+  </script>
+    <script>
+      $(document).ready(function () {
+          // Hide the div
+          $("#div14").show();
+          // Show the div after 5s
+          $("#div14").delay(10000).fadeOut(0);  
+      });    
+  </script>
+    </head>
 <style>
         .tabs .indicator {
         position: absolute;
@@ -57,6 +74,16 @@
         <li class="tab col s3 blue-grey darken-2"><a class="show-on-large hide-on-med-and-down white-text" href="#test-swipe-2">Whitelist Police/Fire/EMS Application</a><a class="hide-on-large-only white-text" href="#test-swipe-2">Police</a></li>
         <li class="tab col s3 blue-grey darken-2"><a class="show-on-large hide-on-med-and-down white-text" href="#test-swipe-3">Staff Application</a><a class="hide-on-large-only white-text" href="#test-swipe-3">Staff</a></li>
         <li class="tab col s3 blue-grey darken-2"><a class="show-on-large hide-on-med-and-down white-text" href="#test-swipe-4">Ban Appeal Form</a><a class="hide-on-large-only white-text" href="#test-swipe-4">Ban</a></li>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer" style="z-index: 1005; display: block; opacity: 1; transform: scaleX(1); top: 10%;">
+          <div class="modal-content">
+            <h3 class="center">Please Read</h3><br><br>
+            <h4 class="center flow-text">Nine By Nine is closed until we<br>get our server files updated to work<br>with the new FXServer software.<br><br>We will notify everyone on Discord<br>when we re-open.<br><br>Application processing has been<br>temporarily suspended.</h4>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" id="div13" class="modal-action modal-close waves-effect waves-white btn green darken-3">I Understand</a>
+          </div>
+        </div>
     </ul>
     <div id="test-swipe-1" class="col s12 white">
         <section class="" id="header4-9" style="">
@@ -194,6 +221,13 @@
             </html>
         </section>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('#modal1').openModal({
+                dismissible: false
+            });
+        });
+    </script>
     <script>
         $(document).ready(function () {
             $('ul.tabs').tabs('select_tab', 'tab_id');
