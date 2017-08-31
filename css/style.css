@@ -588,7 +588,7 @@ canvas {
 
 .imagebackground {
     background-color: black;
-    background-image: url(/images/loadscreen2.jpg);
+    background-image: url(/images/loadscreen.jpg);
     background-size: cover;
     opacity: 1;
 }
