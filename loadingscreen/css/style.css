@@ -7,6 +7,22 @@ Author: Samuel Dalusung
 /* GENERAL STYLES
 ================================================== */
 
+ 
+@keyframes pulse {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}
+
+
+
+
 html {
     height: 100%
 }

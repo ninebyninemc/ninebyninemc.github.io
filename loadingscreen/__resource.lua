@@ -9,8 +9,9 @@ files {
     'js/device.min.js',
     'js/jquery.mb.YTPlayer.js',
     'js/jquery-1.11.1.min.js',
+    'music/song.ogg',
 }
 
 loadscreen 'index.html'
 
-resource_manifest_version '72431fab-63ca-442c-c67b-abc70f28dfa5'
+resource_manifest_version '7abc1abb-63ca-442c-c67b-abc70f28dfa5'

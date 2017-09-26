@@ -1,66 +1,69 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Loading Screen</title>
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/normalize.css" media="all">
     <link rel="stylesheet" href="css/style.css" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/device.min.js"></script>
     <!--OPTIONAL JQUERY PLUGIN-->
     <script src="js/jquery.mb.YTPlayer.js"></script>
-    <script src="js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.0/dist/sheetrock.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+    <link rel='stylesheet prefetch' href='https://jaysalvat.github.io/vegas/releases/latest/vegas.min.css'>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://jaysalvat.github.io/vegas/releases/latest/vegas.js'></script>
     <meta name="robots" content="noindex,follow" /> </head>
 
 <body>
+    <audio id="Loading" autoplay loop >
+         <source src="music/song.ogg" type="audio/ogg">
+    </audio>
+	<script>
+     var vid = document.getElementById("Loading");
+     vid.volume = 0.2
+    </script>
     <section class="big-background">
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=gvLRYdXYT90',containment:'body',autoPlay:true, mute:false, startAt:0, opacity:1}"></a>
         <div class="pattern"></div>
         <div class="big-background-container">
-            <div class="center" id="team-rbi2">
-                <script id="team-rbi-template2" type="text/x-handlebars-template">
-                    <h2 class="alert">{{cells.alertmessage}}</h2> </script>
-            </div>
-            <h1 class="big-background-title"><font color="#8f0c0c">Nine</font> <font color="#04a327">By</font> <font color="#1064ce">Nine</font></h1>
-            <h2 style="font-size:36pt;color:#ffffff;" id="">Roleplay Community</h2>
+            <h1 class="big-background-title">
+                <font color="#fff">Pierce County Justice</font>
+            </h1>
             <div class="divider"></div>
-            <h1 id="colorize"><h1 id="colorize" class=""></h1>
-            <p id="colorize" class="text">Server 1 Is Loading...
-                <br>
-                <br> </p>
-            <p id="colorize" class="text">Type /help for in-game commands and our server rules</p>
-            <p id="colorize" class="text">Join Our Teamspeak ts.ninebynine.us
-                <br>
-                <br> </p>
-            <p id="colorize" class="text">Application Required For Law Enforcement and Fire/EMS</p>
-            <p id="colorize" class="text">Apply For Law Enforcement On Our Website www.ninebynine.us/apply</p>
-            <p id="colorize" class="text">Do Not RDM Players or Leave Active RP
-                <br>
-                <br> </p>
-            <p id="colorize" class="text">Do Not Teleport To Active RP, It's Rude
-                <br>
-                <br> </p>
-            <p id="colorize" class="text">The Latest Version Of Lambda Menu Is Required </p>
-            <p id="colorize" class="text">Donate On Our Website www.ninebynine.us
-                <br>
-                <br> </p>
-            <p id="colorize" class="text">Spread Out And Enjoy Blaine County, Don't Cluster In One Area </p>
+            <h1 id="colorize">
+                <h1 id="colorize" class=""></h1>
+                <p id="colorize" class="text">Server 1 Is Loading...
+                    <br>
+                    <br> </p>
+                <p id="colorize" class="text">Type /help for in-game commands and our server rules</p>
+                <p id="colorize" class="text">Join Our Teamspeak, Type /teamspeak In Game
+                    <br>
+                    <br> </p>
+                <p id="colorize" class="text">Application Required For Law Enforcement and Fire/EMS</p>
+                <p id="colorize" class="text">Apply For Law Enforcement On Our Website http://piercecountyjustice.enjin.com/</p>
+                <p id="colorize" class="text">READ THE RULES, Use /rules In Game
+                    <br>
+                    <br> </p>
+                <p id="colorize" class="text">Do Not Teleport To Active RP, It's Rude
+                    <br>
+                    <br> </p>
+                <p id="colorize" class="text">The Latest Version Of Lambda Menu Is Required</p>
+                <p id="colorize" class="text">Spread Out And Enjoy Washington State, Don't Cluster In One Area</p>
             </h1>
         </div>
         <p class="credits">Server 1: Serious Public Roleplay
-            <br>Community Manager: Mark Payne
-            <br>Developed By: Ryan Lewis and Jack MacTavish</p>
-        </div>
+            <br>Directors: Nuitari, Wolfz, and Lamping
+            <br>Developed By: Nolan8024, Treh Finley, and Jack MacTavish</p>
     </section>
     <!-- Script for the text changer !-->
     <script>
-        (function () {
+        (function() {
             //used for text
             var text = $(".text");
             var quoteIndex = -1;
@@ -73,7 +76,7 @@
             }
             showNextQuote();
         })();
-        (function () {
+        (function() {
             //Ignore tis function, it is used for the twoquote style
             var text = $(".text2");
             var quoteIndex = -1;
@@ -86,22 +89,32 @@
         })
     </script>
     <script>
-        // Sheetrock.js 1.0 Example 4
-        // https://chriszarate.github.io/sheetrock/
-        // Let’s group some data. For a more straightforward template, we’ll 
-        // specify the labels we want Sheetrock to use when it returns the 
-        // data using the labels option.
-        // Define spreadsheet URL.
-        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
-        // Compile Handlebars template for team RBI leaders.
-        var RBITemplate = Handlebars.compile($('#team-rbi-template2').html());
-        // Load top five team RBI leaders.
-        $('#team-rbi2').sheetrock({
-            url: mySpreadsheet
-            , sql: "select A"
-            , chunkSize: 1
-            , labels: ['alertmessage']
-            , rowHandler: RBITemplate
+        // Pictures from Unsplash
+        // http://unsplash.com/
+
+        $('body').vegas({
+            overlay: false,
+            transition: 'fade',
+            transitionDuration: 4000,
+            delay: 10000,
+            animation: 'random',
+            animationDuration: 20000,
+            slides: [{
+                    src: 'http://blog.thenewstribune.com/crime/files/2013/03/130326-Fife-Heights-shoot-A0153.jpg'
+                },
+                {
+                    src: 'https://harvardpartners.org/wp-content/uploads/2016/11/Mount_Rainier_over_Tacoma.jpg'
+                },
+                {
+                    src: 'http://mediad.publicbroadcasting.net/p/nwpr/files/201202/020512AU_PowellExplosion_1.JPG'
+                },
+                {
+                    src: 'http://blog.thenewstribune.com/crime/files/2012/08/Key-peninsula2.jpg'
+                },
+                {
+                    src: 'http://thecleanstart.com/wp-content/uploads/2016/12/Tacoma-Washington-4.jpg'
+                }
+            ]
         });
     </script>
 </body>
