@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <link rel="shortcut icon" href="images/squarelogonobg.png" type="image/x-icon">
-    <meta name="Description" content="Nine By Nine, The Most Symmetrical Minecraft Server">
+    <meta name="Description" content="FDLE Roleplay Server">
     <meta name="Keywords" content="minecraft, server, ninebynine, NinebyNine, NineByNine, 9x9, 9X9, all, the, mods, lite, 1.10.2, atml, ATML, All The Mods Lite, all the mods lite, fun, games, pc, community, forum, discord">
     <!-- Disable Browser Caching -->
     <meta http-equiv="cache-control" content="max-age=0" />
@@ -24,7 +24,7 @@
     <meta property="og:description" content="The Most Symmetrical Minecraft Server" />
     <meta property="og:url" content="https://ninebynine.us/" />
     <meta property="og:title" content="Nine By Nine" />
-    <title>Nine By Nine | Home</title>
+    <title>FDLE | Home</title>
     <!-- Chrome, Firefox OS, Opera and Vivaldi -->
     <meta name="theme-color" content="#263238">
     <!-- Windows Phone -->
@@ -41,11 +41,11 @@
     <script src="/js/motd-color.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css"> </head>
 
-<body class="cyan darken-1">
+<body style="background-color:#01B7DE;" class="">
     <!-- PRELOADER DISABLED <div id="overlay" class="wrapper"> <img class="logo-svg" src="images/perfectlysquarelogo.svg" /> </div> -->
     <div class="sky">
-        <nav class="blue-grey darken-4 lighten-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" style="font-family:Wisdom;" href="index.html" class="brand-logo">Nine by Nine</a>
+        <nav style="background-color:#433C8A;" class="" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" style="font-family:Fascinate;" href="index.html" class="brand-logo">FDLE Roleplay</a>
                 <!-- <ul class="right hide-on-med-and-down"> <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> </ul> 
                 <ul id="nav-mobile" class="side-nav blue-grey darken-4">
                     <li class=""><a class="white-text" href="index.html">HOME</a></li>
@@ -56,17 +56,14 @@
                     <li class=""><a class="white-text" href="ts3server://ts.ninebynine.us">JOIN OUR TEAMSPEAK</a></li>
                     <li class=""><a class="white-text" href="https://discord.gg/Vj3q6bP">JOIN OUR DISCORD</a></li>
                     <li class=""><a class="white-text" href="contact.html">CONTACT</a></li>
-                </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> --> </div>
+                </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
+            </div>
         </nav>
-        <div style="width:100%; position:absolute; z-index:0; overflow:hidden;" id="canvas"></div>
-        <div style="height:100vh;" class="section blue-grey darken-4 no-pad-bot imagebackground" id="index-banner">
-            <script id="vertexShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { vNormal = normalize( normalMatrix * normal ); gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); } </script>
-            <script id="fragmentShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 4.0 ); gl_FragColor = vec4( 0.0, 0.3, 1.0, 1.0 ) * intensity; } </script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js'></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/lib/alea.js'></script>
-            <script src='https://codepen.io/clindsey/pen/egQpvE.js'></script>
-            <script src='https://cdn.rawgit.com/jwagner/simplex-noise.js/87440528bcf8ec89840e974d8f76cfe3da548c37/simplex-noise.min.js'></script>
-            <script src="js/pixelearth.js"></script>
+        <div style="width:100%; position:absolute; z-index:0; overflow:hidden;" id="canvas"><div class="tv">
+                <div class="screen mute" id="tv"></div>
+            </div></div>
+        <div style="height:100vh;" class="section blue-grey darken-4 no-pad-bot " id="index-banner">
+            
             <div style="position: relative;
   top: 50%;
   transform: translateY(-50%);">
@@ -77,15 +74,16 @@
                             <h5 class="hide-on-large-only center red-text"><strong>{{cells.TeamName}}</strong><br></h5> </script>
                     </div>
                     <br>
-                    <hr>
-                    <h1 style="font-family:Wisdom;font-size:8.5vw;" class="flow-text header center white-text">Nine By Nine</h1>
-                    <br class="show-on-large hide-on-med-and-down">
-                    <hr>
-                    <div class="row center"><br><br><br>
-                       <!-- <div id="team-rbi2">
+                    <h1 class="header center"><div id="title">
+  <h11 class="center"><span>FDLE<br class="show-on-large hide-on-med-and-down"><br class="show-on-large hide-on-med-and-down"></span><br class="show-on-large hide-on-med-and-down"><span><br class="show-on-large hide-on-med-and-down">Roleplay</span></h11>
+</div></h1>
+                    <div class="row center">
+                        <br>
+                        <br>
+                        <br>
+                        <!-- <div id="team-rbi2">
                             <h4 class="show-on-large hide-on-med-and-down white-text"><br><br>The Most Symmetrical Roleplay Server</h4>
-                            <h5 class="hide-on-large-only white-text"><br><br>The Most Symmetrical Roleplay Server</h5> </div> -->
-                    </div>
+                            <h5 class="hide-on-large-only white-text"><br><br>The Most Symmetrical Roleplay Server</h5> </div> --></div>
                     <br>
                     <div class="hide-on-med-and-down center"> <i class="bounce white-text fa-5x fa fa-angle-down"></i> </div>
                     <br>
@@ -94,19 +92,18 @@
                     <br> </div>
             </div>
         </div>
-</div>
-<div class="row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
-    <div class="col s12 m8 l8 offset-l2 offset-m2">
-        <h3 style="font-weight:400;" class="flow-text white-text justify">Hello Everyone,<br><br> We regret to inform you that Nine By Nine is hereby semi-permanently closed. Unfortunately, The Executive Board has too much going on in-real-life to dedicate the necessary time to running Nine By Nine’s FiveM server. We enjoyed the time that we were open and hope everyone else did too. As of today (8/31/17) we will no longer be processing any applications. Our website will be reduced to this single page, and our TeamSpeak 3 server will be turned off.<br><br>We want to thank everyone for the wonderful times we had together and we hope that we are afforded the opportunity to re-open at some point in the future. <br><br>Sincerely: <br><br>Nine By Nine Executive Board
-        </h3>
     </div>
-</div>
-    <footer class="page-footer blue-grey darken-4">
+    <div class="row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
+        <div class="col s12 m8 l8 offset-l2 offset-m2">
+            <h3 style="font-weight:400;" class="flow-text white-text justify">Hello Everyone,<br><br> We regret to inform you that Nine By Nine is hereby semi-permanently closed. Unfortunately, The Executive Board has too much going on in-real-life to dedicate the necessary time to running Nine By Nine’s FiveM server. We enjoyed the time that we were open and hope everyone else did too. As of today (8/31/17) we will no longer be processing any applications. Our website will be reduced to this single page, and our TeamSpeak 3 server will be turned off.<br><br>We want to thank everyone for the wonderful times we had together and we hope that we are afforded the opportunity to re-open at some point in the future. <br><br>Sincerely: <br><br>Nine By Nine Executive Board
+        </h3> </div>
+    </div>
+    <footer style="background-color:#433C8A;" class="page-footer">
         <div class="container center">
-            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright (c) 2017, NINE BY NINE ROLEPLAY | DESIGN BY: JACK MACTAVISH</p>
-            <p class="white-text" style="font-size:14pt;">| SPECIAL THANKS TO ALEXBEGT, HE BRINGS THE DANK MEMES |</p>
+            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright © 2017, FDLE ROLEPLAY | DESIGN BY: JACK MACTAVISH</p>
+            <p class="white-text" style="font-size:14pt;">| SPECIAL THANKS TO ALL THOSE WHO HELPED US GET STARTED |</p>
             <p>
-                <div class="row">
+                <!-- <div class="row">
                     <div align="right" class="col s6 m6 l6">
                         <script language="JavaScript" type="text/javascript">
                             TrustLogo("https://ninebynine.us/images/comodo_secure_seal_76x26_transp.png", "CL1", "none");
@@ -138,7 +135,7 @@
                             //]]>
                         </script>
                     </div>
-                </div>
+                </div> -->
             </p>
             <br> </div>
     </footer>
@@ -185,6 +182,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/videobackground.js"></script>
 </body>
 
 </html>
