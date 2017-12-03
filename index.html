@@ -10,9 +10,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <meta name="Description" content="FDLE Roleplay Server">
-    <meta name="Keywords" content="fivem, server, fdlerp, FDLERP, FDLE Roleplay, FDLE, fdle, police, gta, mods, game, games, pc, community, forum, discord">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="Description" content="TenEight, Always In Service">
+    <meta name="Keywords" content="teneight, server, fivem">
     <!-- Disable Browser Caching -->
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
@@ -20,15 +20,15 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <!-- /Disable Browser Caching -->
-    <meta property="og:image" content="http://fdlerp.network/images/logo.png" />
-    <meta property="og:description" content="Florida Department Of Law Enforcement RP" />
-    <meta property="og:url" content="http://fdlerp.network/" />
-    <meta property="og:title" content="FDLE Roleplay" />
-    <title>SAESRP | Home</title>
+    <meta property="og:image" content="https://i.imgur.com/Sl1qCHA.png" />
+    <meta property="og:description" content="Always In Service" />
+    <meta property="og:url" content="https://teneightroleplay.com/" />
+    <meta property="og:title" content="TenEight" />
+    <title>TenEight | Home</title>
     <!-- Chrome, Firefox OS, Opera and Vivaldi -->
-    <meta name="theme-color" content="#433C8A">
+    <meta name="theme-color" content="#b71c1c">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#433C8A">
+    <meta name="msapplication-navbutton-color" content="#b71c1c">
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -41,29 +41,32 @@
     <script src="/js/motd-color.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css"> </head>
 
-<body style="background-color:#01B7DE;" class="">
+<body class="yellow darken-2">
     <!-- PRELOADER DISABLED <div id="overlay" class="wrapper"> <img class="logo-svg" src="images/perfectlysquarelogo.svg" /> </div> -->
     <div class="sky">
-    <nav style="background-color:#433C8A;" class="" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" style="font-family:Fascinate;z-index:99;" href="index.html" class="brand-logo">SAES Roleplay</a>
-            <ul class="right hide-on-med-and-down"> <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> </ul>
-            <ul id="nav-mobile" style="background-color:#291749;" class="side-nav">
-                <li class=""><a class="white-text" href="index.html">HOME</a></li>
-                <!--<li class=""><a class="white-text" href="features.html">FEATURES</a></li>-->
-                <!--<li class=""><a class="white-text" href="store.html">STORE</a></li>
-                <li class=""><a class="white-text" href="about.html">ABOUT</a></li>-->
-                <li class=""><a class="white-text" href="apply.html">APPLICATIONS AND FORMS</a></li>
-                <!--<li class=""><a class="white-text" href="ts3server://ts.ninebynine.us">JOIN OUR TEAMSPEAK</a></li>-->
-                <!--<li class=""><a class="white-text" href="https://discord.gg/Vj3q6bP">JOIN OUR DISCORD</a></li>-->
-                <!--<li class=""><a class="white-text" href="contact.html">CONTACT</a></li>-->
-            </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> </div>
-    </nav>
-        <div style="width:100%; position:absolute; z-index:0; overflow:hidden;" id="canvas">
-            <div class="tv">
-                <div class="screen mute" id="tv"></div>
-            </div>
-        </div>
-        <div style="height:100vh;" class="section blue-grey darken-4 no-pad-bot " id="index-banner">
+        <nav class="red darken-4 lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" style="font-family:Primetime;" href="index.html" class="brand-logo">TenEight</a>
+                 <ul class="right hide-on-med-and-down"> <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> </ul> 
+                <ul id="nav-mobile" class="side-nav red darken-4">
+                    <li class=""><a class="white-text" href="index.html">HOME</a></li>
+                    <li class=""><a class="white-text" href="features.html">FEATURES</a></li>
+                    <li class=""><a class="white-text" href="store.html">STORE</a></li>
+                    <li class=""><a class="white-text" href="about.html">ABOUT</a></li>
+                    <li class=""><a class="white-text" href="apply.html">APPLICATIONS AND FORMS</a></li>
+                    <li class=""><a class="white-text" href="ts3server://ts.teneightroleplay.com">JOIN OUR TEAMSPEAK</a></li>
+                    <li class=""><a class="white-text" href="https://discord.gg/UmKEc2E">JOIN OUR DISCORD</a></li>
+                    <li class=""><a class="white-text" href="contact.html">CONTACT</a></li>
+                </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> </div>
+        </nav>
+        <div style="width:100%; position:absolute; z-index:0; overflow:hidden;" id="canvas"></div>
+        <div style="height:100vh;" class="section blue-grey darken-4 no-pad-bot imagebackground" id="index-banner">
+            <script id="vertexShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { vNormal = normalize( normalMatrix * normal ); gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); } </script>
+            <script id="fragmentShader" type="x-shader/x-vertex"> varying vec3 vNormal; void main() { float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 4.0 ); gl_FragColor = vec4( 0.0, 0.3, 1.0, 1.0 ) * intensity; } </script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/lib/alea.js'></script>
+            <script src='https://codepen.io/clindsey/pen/egQpvE.js'></script>
+            <script src='https://cdn.rawgit.com/jwagner/simplex-noise.js/87440528bcf8ec89840e974d8f76cfe3da548c37/simplex-noise.min.js'></script>
+            <script src="js/pixelearth.js"></script>
             <div style="position: relative;
   top: 50%;
   transform: translateY(-50%);">
@@ -73,18 +76,16 @@
                             <h4 class="show-on-large hide-on-med-and-down center red-text"><strong>{{cells.TeamName}}</strong><br></h4>
                             <h5 class="hide-on-large-only center red-text"><strong>{{cells.TeamName}}</strong><br></h5> </script>
                     </div>
-                    <br>
-                    <!--<h1 class="header center"><div id="title">
-  <h11 class="center"><span>FDLE<br class="show-on-large hide-on-med-and-down"><br class="show-on-large hide-on-med-and-down"></span><br class="show-on-large hide-on-med-and-down"><span><br class="show-on-large hide-on-med-and-down">Roleplay</span></h11>
-</div></h1>-->
-                    <h1 class="header center white-text">San Adreas Emergency Services Roleplay</h1>
-                    <div class="row center">
-                        <br>
-                        <br>
-                        <br>
-                        <!-- <div id="team-rbi2">
+                    <br><br><br><br><br><br>
+                    <hr>
+                    <h1 style="font-family:Primetime;font-size:4.5vw;" class="flow-text header center white-text">TenEight Roleplay</h1>
+                    <br class="show-on-large hide-on-med-and-down">
+                    <hr>
+                    <div class="row center"><br><br><br>
+                       <!-- <div id="team-rbi2">
                             <h4 class="show-on-large hide-on-med-and-down white-text"><br><br>The Most Symmetrical Roleplay Server</h4>
-                            <h5 class="hide-on-large-only white-text"><br><br>The Most Symmetrical Roleplay Server</h5> </div> --></div>
+                            <h5 class="hide-on-large-only white-text"><br><br>The Most Symmetrical Roleplay Server</h5> </div> -->
+                    </div>
                     <br>
                     <div class="hide-on-med-and-down center"> <i class="bounce white-text fa-5x fa fa-angle-down"></i> </div>
                     <br>
@@ -93,22 +94,21 @@
                     <br> </div>
             </div>
         </div>
-    </div>
-    <div class="row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
+</div>
+<div class="row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
         <div class="col s12 m8 l8 offset-l2 offset-m2">
-            <h3 style="font-weight:400;" class="flow-text white-text center">Links:<br><br>
+            <h3 style="font-weight:100;font-family:Primetime;" class="flow-text white-text center">Helpful Links:<br><br>
                 <a class="white-text" href="https://discord.gg/4F5aEjt">Our Discord (Must Have Discord Installed For This Link To Work)</a><br>
-                <a class="white-text" href="ts3server:ts.fdlerp.network">Our Teamspeak (Must Have TS3 Installed For This Link To Work)</a><br>
+                <a class="white-text" href="ts3server:ts.teneightroleplay.com">Our Teamspeak (Must Have TeamSpeak Installed For This Link To Work)</a><br>
                 <a class="white-text" href="apply.html">Application Page (Apply For Law Enforcement Today)</a><br>
-                <a class="white-text" href="http://forum.fdlerp.network">Our Forum (Sign Up Now)</a></h3> </div>
+                <a class="white-text" href="http://forum.teneightroleplay.com">Our Forum (Sign Up Now)</a></h3> </div>
     </div>
-    <footer style="background-color:#433C8A;" class="page-footer">
+    <footer class="page-footer red darken-4">
         <div class="container center">
-            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright © 2017, SAES ROLEPLAY | DESIGN BY: JACK MACTAVISH</p>
-            <p class="white-text" style="font-size:14pt;">| SPECIAL THANKS TO ALL THOSE WHO HELPED US GET STARTED |</p>
-            <p class="white-text" style="font-size:8pt;">We are a videogame server. We are not affiliated with real law enforcement in any way.</p>
-            <p>
-                <!-- <div class="row">
+            <p class="white-text" style="margin-bottom:-15px;font-size:14pt;">Copyright (c) 2017, TenEight Roleplay | Design By: Jack MacTavish</p>
+            <p class="white-text" style="font-size:14pt;">| Special Thanks To Andrew P, He Brings The Dank Plants |</p>
+            <!-- <p>
+                <div class="row">
                     <div align="right" class="col s6 m6 l6">
                         <script language="JavaScript" type="text/javascript">
                             TrustLogo("https://ninebynine.us/images/comodo_secure_seal_76x26_transp.png", "CL1", "none");
@@ -140,8 +140,8 @@
                             //]]>
                         </script>
                     </div>
-                </div>  -->
-            </p>
+                </div>
+            </p> -->
             <br> </div>
     </footer>
     <script src="js/preloader.js"></script>
@@ -187,8 +187,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="js/videobackground.js"></script>
 </body>
 
 </html>

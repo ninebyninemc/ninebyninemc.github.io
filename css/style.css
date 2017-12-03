@@ -8,80 +8,6 @@
  * Made By MaterializeCSS.com
  */
 
-
-@import "https://fonts.googleapis.com/css?family=Fascinate";
-
-#title {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-h11 {
-  text-align: center;
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  font-family: Fascinate;
-  font-size: 8vw;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-h11 span {
-  display: inline-block;
-}
-h11 span:nth-child(1) {
-  color: #01B7DE;
-}
-h11 span:nth-child(1):after {
-  content: '';
-  background: #01B7DE;
-  position: relative;
-  top: -0.01em;
-  width: 56vw;
-  height: 1em;
-  display: block;
-  border-radius: 5px;
-}
-h11 span:nth-child(3) {
-  color: #E97DB1;
-  letter-spacing: 0.18em;
-  position: relative;
-  top: -1.15em;
-  z-index: 2;
-  text-shadow: 1px 1px 1px #01B7DE, 0.2em 0.15em 0 #433C8A;
-}
-
-
-
-.tv {
-  background-color:#433C8A;
-  position: ;
-  margin-bottom: 0;
-  left: 0;
-  z-index: -99999;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-.tv .screen {
-  position: ;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -99999;
-  margin: auto;
-  opacity: 0;
-  transition: opacity .5s;
-}
-.tv .screen.active {
-  opacity: 1;
-}
-
-
-
-
 .icon-block {
     padding: 0 15px;
 }
@@ -93,6 +19,11 @@ h11 span:nth-child(3) {
 @font-face {
     font-family: "Wisdom";
     src: url('../fonts/wisdom/Wisdom.otf');
+}
+
+@font-face {
+    font-family: "Primetime";
+    src: url('../fonts/primetime.ttf');
 }
 
 .bounce {
@@ -662,7 +593,14 @@ canvas {
 
 .imagebackground {
     background-color: black;
-    background-image: url(/images/loadscreen.jpg);
+    background-image: url(/images/loadscreen.png);
+    background-size: cover;
+    opacity: 1;
+}
+
+.plainbackground {
+    background-color: black;
+    background-image: url(/images/loadscreenNoMan.png);
     background-size: cover;
     opacity: 1;
 }
