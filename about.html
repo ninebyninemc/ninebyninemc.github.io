@@ -66,7 +66,7 @@
         <br>
         <div class="col l6">
             <h5 class="center" style="font-family:Primetime;">About Us</h5>
-            <p style="font-size:14pt;text-align: justify;text-justify: inter-word;">TenEight Roleplay Community is a FiveM Server that was started by a few people who wanted serious roleplay. We were tired of all the servers where nobody would do serious roleplay, so we started our own. Running on powerful hardware and a two gigabit ethernet connection, we aim for smooth gameplay in a world full of laggy servers. So, if you want fun and serious roleplay check us out, and join today. We are a diverse community, we have people from all walks of life (Powpow is an apache attack helicopter). Don't say something to someone that you wouldn't say to their face (No Cyber-Thuggin'). We expect people to be respectful to each other regardless of race, creed, color, or gender. There is no appeals process for bans involving derogatory terminology. If you see a pig, a sheep and a cow walk out of the bank, don’t shoot them, call their owner (We Mean You, Jim). Sorry if this paragraph got a bit random, but some things just had to be said...</p>
+            <p style="font-size:14pt;text-align: justify;text-justify: inter-word;">TenEight Roleplay Community is a FiveM Server that was started by a few people who wanted serious roleplay. We were tired of all the servers where nobody would do serious roleplay, so we started our own. Running on powerful 7th Generation Intel hardware and with a gigabit ethernet connection, we aim for smooth gameplay in a world full of laggy servers. So, if you want fun and serious roleplay check us out, and join today. We are a diverse community, we have people from all walks of life. A few of our major rules of thumb are; Don't say something to someone that you wouldn't say to their face (No Cyber-Thuggin'), and Be respectful to each other regardless of race, creed, color, or gender. There is no appeals process for bans involving derogatory terminology. If you see a pig, a sheep and a cow walk out of the bank, don’t shoot them, call their owner (We Mean You, Jim). Sorry if this paragraph got a bit random, but some things just had to be said....</p>
         </div>
         <div class="col l6">
             <h5 class="center" style="font-family:Primetime;">Staff List</h5>
@@ -197,46 +197,6 @@
             , chunkSize: 1
             , labels: ['TeamName2']
             , rowHandler: RBITemplate
-        });
-    </script>
-    <script src="https://mcapi.us/scripts/minecraft.js"></script>
-    <script>
-        MinecraftAPI.getServerStatus('play.ninebynine.us', {
-            port: 25565 // optional, only if you need a custom port
-        }, function (err, status) {
-            if (err) {
-                return document.querySelector('.bungee-status').innerHTML = 'Error Loading Status';
-            }
-            document.querySelector('.bungee-online').innerHTML = status.online ? '<div class="" style="background-color:#006600;"><div style="padding:2px;background-color:#006600;"><h4 class="">Online</h4></div></div>' : '<div class="" style="background-color:#cc0000;"><div class=""><h4 class="">Offline</h4></div></div>';
-            document.querySelector('.bungee-players').innerHTML = status.players.now;
-            document.querySelector('.bungee-max-players').innerHTML = status.players.max;
-            document.querySelector('.bungee-motd').appendChild(parseStyle(status.motd));
-        });
-    </script>
-    <script>
-        MinecraftAPI.getServerStatus('eternity.ninebynine.us', {
-            port: 25565 // optional, only if you need a custom port
-        }, function (err, status) {
-            if (err) {
-                return document.querySelector('.server-status').innerHTML = 'Error loading status';
-            }
-            document.querySelector('.server-online1').innerHTML = status.online ? '<div class="" style="background-color:#006600;"><div style="padding:2px;background-color:#006600;"><h4 class="">Online</h4></div></div>' : '<div class="" style="background-color:#cc0000;"><div class=""><h4 class="">Offline</h4></div></div>';
-            document.querySelector('.server-players1').innerHTML = status.players.now;
-            document.querySelector('.server-max-players1').innerHTML = status.players.max;
-            document.querySelector('.server-motd1').appendChild(parseStyle(status.motd));
-        });
-    </script>
-    <script>
-        MinecraftAPI.getServerStatus('lobby.ninebynine.us', {
-            port: 25565 // optional, only if you need a custom port
-        }, function (err, status) {
-            if (err) {
-                return document.querySelector('.server-status').innerHTML = 'Error loading status';
-            }
-            document.querySelector('.server-online').innerHTML = status.online ? '<div class="" style="background-color:#006600;"><div style="padding:2px;background-color:#006600;"><h4 class="">Online</h4></div></div>' : '<div class="" style="background-color:#cc0000;"><div class=""><h4 class="">Offline</h4></div></div>';
-            document.querySelector('.server-players').innerHTML = status.players.now;
-            document.querySelector('.server-max-players').innerHTML = status.players.max;
-            document.querySelector('.server-motd').appendChild(parseStyle(status.motd));
         });
     </script>
     <!--  Scripts-->
