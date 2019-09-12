@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ajax-cross-origin.min.js"></script>
+</head>
+
+<body>
+<div id="test"></div>
+
+<script type="text/javascript">
+$(function() {
+	$(document).ready(function(){
+		$.ajax({
+		  crossOrigin: true,
+		  url: 'http://198.46.193.102:1234/players.json',
+		  dataType: "json", 
+		  context: {},
+		  success: function(data) 
+            {
+			  json = JSON.parse(data)
+			  length = json.length
+			  $( '#test' ).html(length + "/32");
+			  //alert(length);
+            },
+          error: function(data)
+            {
+              $( '#test' ).html("Server Is Offline");
+            }
+		})
+	});
+	
+
+}); 
+</script>
+
+</body>
+</html>

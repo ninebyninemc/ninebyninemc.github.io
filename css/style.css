@@ -590,7 +590,7 @@ canvas {
     background-color: black;
     background-image: url(/images/loadscreen.jpg);
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
 }
 
 /* BIG VIDEO BACKGROUND
