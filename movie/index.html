@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Nine By Nine | Movie</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://ninebynine.us/images/squarelogonobg.png" type="image/x-icon">
+    <!-- Load jQuery and Sheetrock from CDNJS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.0/dist/sheetrock.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="intro">
+  <h1 class="intro-title"><font color="#790a0a">Nine</font> <font color="#04a929">By</font> <font color="#065dc3">Nine</font></h1>
+  <p class="intro-text intro-text--can">
+    <strong><u>Please Read!</u></strong><br>
+    The following video rendering is performance intensive, and will play audio. This video was <u>not</u> designed to play on phones. If you
+    experience any issues, try sizing down your browser and refreshing.
+    <br/>
+    <button class="intro-text-play" data-play>&#9654;</button><br><br><a class="intro-text-button" href="https://ninebynine.us/">
+      Skip Video
+    </a><br>For Phone Users
+  </p>
+  <p class="intro-text intro-text--shouldnt">
+    Unfortunately this demo uses many features only found in the latest
+    version of Google Chrome. You can still run this, but it may not look
+    as intended. Please try running it in Chrome for the best experience.
+    <br/>
+    <a class="intro-text-button" href="https://www.google.com/chrome/browser/">
+      Download Chrome
+    </a>
+    <button class="intro-text-button" data-play>
+      Play Anyway
+    </button>
+  </p>
+  <p class="intro-text intro-text--cant">
+    Unfortunately your browser doesn't support this demo. Please download
+    Google Chrome, and try running it again.
+    <br/>
+    <a class="intro-text-button" href="https://www.google.com/chrome/browser/">
+      Download Chrome
+    </a>
+  </p>
+  <noscript>
+    The following demo requires javascript to run. Please enable it and
+    refresh the browser.
+  </noscript>
+</div>
+
+<div class="viewport">
+  <div class="scene">
+    <div class="title title--full">
+      <div class="title-word">
+        <!--<span class="title-word-letter" data-letter="S1">
+            <span class="title-word-letter-large"><font color="#790a0a">N</font></span>
+          <div class="titlebar titlebar--left"></div>
+        </span>-->
+          <span class="title-word-letter" data-letter="T2"><font color="#790a0a">N</font></span>
+          <span class="title-word-letter" data-letter="N1"><font color="#790a0a">i</font></span>
+          <span class="title-word-letter" data-letter="R1"><font color="#790a0a">n</font></span>
+          <span class="title-word-letter" data-letter="A"><font color="#790a0a">e </font></span>
+        <span class="title-word-letter" data-letter="N1"> </span>
+        <span class="title-word-letter" data-letter="G1"> </span>
+          <span class="title-word-letter" data-letter="T2"><font color="#04a929">B</font></span>
+        <span class="title-word-letter" data-letter="R2"> <font color="#04a929">y </font></span>
+          <span class="title-word-letter" data-letter="T2"> </span>
+          <span class="title-word-letter" data-letter="T2"><font color="#065dc3">N</font></span>
+          <span class="title-word-letter" data-letter="I"><font color="#065dc3">i</font></span>
+          <span class="title-word-letter" data-letter="N2"><font color="#065dc3">n</font></span>
+          <span class="title-word-letter" data-letter="G2"><font color="#065dc3">e</font></span>
+        <span class="title-word-letter" data-letter="S2"> </span>
+    
+        <div class="titlebar titlebar--top"></div>
+      </div>
+
+      <div></div>
+
+      <div class="title-word title-word--second">
+          <span style="font-family:'Raleway';font-weight: bold;font-size: 66vmin;line-height:normal;" class="title-word-letter" data-letter="R2"><font color="#A8A6A7"><br><br>Roleplay Community</font></span>
+          <!--<span class="title-word-letter" data-letter="H"><font color="#065dc3">N</font></span>
+          <span class="title-word-letter" data-letter="I"><font color="#065dc3">i</font></span>
+          <span class="title-word-letter" data-letter="N2"><font color="#065dc3">n</font></span>
+          <span class="title-word-letter" data-letter="G2"><font color="#065dc3">e</font></span>
+        <span class="title-word-letter" data-letter="S2"> </span>-->
+      </div>
+    </div>
+
+    <div class="title title--scene title--scene0"></div>
+    <div class="title title--scene title--scene1">
+      <div class="title-word">
+          <div class="title-word-letter" data-letter="A"><font color="#790a0a">N</font></div>
+      </div>
+    </div>
+    <div class="title title--scene title--scene2">
+      <div class="title-word">
+          <div class="title-word-letter" data-letter="N"><font color="#790a0a">i</font></div>
+      </div>
+    </div>
+    <div class="title title--scene title--scene3">
+      <div class="title-word">
+          <div class="title-word-letter" data-letter="R"><font color="#04a929">B</font></div>
+          <div class="title-word-letter" data-letter="I"><font color="#04a929"></font></div>
+      </div>
+    </div>
+    <div class="title title--scene title--scene4">
+      <div class="title-word">
+        <div class="title-word-letter" data-letter="S"><font color="#065dc3">N</font></div>
+        <div class="title-word-letter" data-letter="G"><font color="#065dc3">i</font></div>
+      </div>
+    </div>
+    <div class="title title--scene title--scene5">
+      <div class="title-word">
+        <div class="title-word-letter" data-letter="R"><font color="#065dc3">n</font></div>
+          <div class="title-word-letter" data-letter="S"><font color="#065dc3">e</font></div>
+      </div>
+    </div>
+    <div class="title title--scene title--scene6">
+      <div class="title-word">
+        <div class="title-word-letter" data-letter="I"><font color="#065dc3">N</font></div>
+        <div class="title-word-letter" data-letter="A"><font color="#065dc3">i</font></div>
+        <div class="title-word-letter" data-letter="T"><font color="#065dc3">n</font></div>
+        <div class="title-word-letter" data-letter="H"><font color="#065dc3">e</font></div>
+        <div class="title-word-letter" data-letter="N"><font color="#04a929">B</font></div>
+        <div class="title-word-letter" data-letter="G"><font color="#04a929">y</font></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="credits">
+    <div class="credits-group">
+      <div class="credits-group-sub">
+        <div id="team-rbi2">
+  <script id="team-rbi-template2" type="text/x-handlebars-template">
+    <p style="font-family:Wisdom;font-size:72pt;">Nine By Nine</p>
+    <p style="font-family:'Raleway';line-height:normal;"><br>Roleplay Community<br><!--Running Infinity Lite Version {{cells.TeamName2}}--></p>
+  </script>
+</div>
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Create Your Character">
+        Create Your Character
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Choose Your Vehicle">
+        Choose Your Vehicle
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Then Go Roleplay">
+        Then Go Roleplay
+      </div>
+      <div class="credits-group-credit" data-text="And Have Fun">
+        And Have Fun
+      </div>
+    </div>
+      
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="But Don't Forget">
+        But Don't Forget
+      </div>
+      <div class="credits-group-credit" data-text="">
+      </div>
+        <div class="credits-group-credit" data-text="To Read The Rules">
+        To Read The Rules
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="We Have A Friendly Trained Staff">
+        We Have A Friendly Trained Staff
+      </div>
+    </div>
+      
+    <div class="credits-group">
+        <div class="credits-group-credit" data-text="We Have A Friendly Trained Staff">
+        Discord and TeamSpeak
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Online CAD System">
+        Online CAD System
+      </div>
+      <div class="credits-group-credit" data-text="">
+        
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Police, Fire, and EMS">
+        Police, Fire, and EMS
+      </div>
+      <div class="credits-group-credit" data-text="ninebynine.us/apply">
+        ninebynine.us/apply
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="Virtually No Server Downtime">
+        Virtually No Server Downtime
+      </div>
+      <div class="credits-group-credit" data-text="">
+        
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="So Prepare For Adventure">
+        So Prepare For Adventure
+      </div>
+      <div class="credits-group-credit" data-text="">
+      </div>
+      <div class="credits-group-credit" data-text="">
+      </div>
+    </div>
+
+    <div class="credits-group">
+      <div class="credits-group-credit" data-text="And Join Us">
+        And Join Us
+      </div>
+      <div class="credits-group-credit" data-text="Today!">
+        Today!
+      </div>
+    </div>
+
+    <div class="credits-group">
+        <div class="credits-group-credit" data-text="">
+      </div>
+    </div>
+      
+    <div class="credits-final">
+      <div class="credits-group-sub" data-text="">
+      </div>
+      <div class="credits-group-credit" data-text="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="vignette"></div>
+<div class="grain"></div>
+<div class="letterbox">
+  <div class="letterbox-cover letterbox-cover--top"></div>
+  <div class="letterbox-cover letterbox-cover--left"></div>
+  <div class="letterbox-cover letterbox-cover--right"></div>
+  <div class="letterbox-cover letterbox-cover--bottom"></div>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+
+        <script src="js/index.js"></script>
+<script>
+// Sheetrock.js 1.0 Example 4
+// https://chriszarate.github.io/sheetrock/
+
+// Let’s group some data. For a more straightforward template, we’ll 
+// specify the labels we want Sheetrock to use when it returns the 
+// data using the labels option.
+
+// Define spreadsheet URL.
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1EdUs1a39UJ1pMlGPKVqrv5mHesfiMLwumoym4bayty4/edit#gid=0';
+
+// Compile Handlebars template for team RBI leaders.
+var RBITemplate = Handlebars.compile($('#team-rbi-template2').html());
+
+// Load top five team RBI leaders.
+$('#team-rbi2').sheetrock({
+  url: mySpreadsheet,
+  sql: "select C",
+  chunkSize: 1,
+  labels: ['TeamName2'],
+  rowHandler: RBITemplate
+});
+</script>
+
+    
+  </body>
+</html>
