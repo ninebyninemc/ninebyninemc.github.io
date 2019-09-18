@@ -61,7 +61,7 @@
         
         
         <nav class="blue-grey darken-4 lighten-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" style="font-family:Wisdom;" href="index.html" class="brand-logo"><font color="#8f0c0c">Nine</font> <font color="#04a327">By</font> <font color="#1064ce">Nine</font></a>
+            <div class="nav-wrapper container"><a id="logo-container" style="font-family:Wisdom;" href="index.html" class="brand-logo"><font color="#fff">Nine</font> <font color="#fff">By</font> <font color="#fff">Nine</font></a>
                 <ul class="right hide-on-med-and-down"> <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a> </ul> 
                 <ul id="nav-mobile" class="side-nav blue-grey darken-4">
                     <li class=""><a class="white-text" href="index.html">HOME</a></li>
@@ -113,7 +113,7 @@
         </div>
 </div>
 <div class="cyan darken-1 row" style="padding-top:100px;padding-bottom:100px;padding-left:10px;padding-right:10px;">
-        <div class="col s12 m6 l6 bungee-status">
+        <div class="col s12 m6 offset-m3 offset-l4 l4 bungee-status">
             <div class="card blue-grey darken-4 white-text">
                 <h4 style="" class="center bungee-online white-text">Loading Status</h4>
                 <h5 class="center">Server 1 [Public]<br>public.ninebynine.us</h5>
@@ -125,7 +125,7 @@
                 <!-- <div class="card-action">
                     <h5 class="center"><span style="color: rgb(170, 0, 0); font-weight: bold;">Nine</span><span style="font-weight: bold;"> </span><span style="color: rgb(0, 170, 0); font-weight: bold;">By</span><span style="font-weight: bold;"> </span><span style="color: rgb(85, 85, 255); font-weight: bold;">Nine</span><span> </span><span style="color: rgb(170, 170, 170);">│</span><span>  </span><span style="color: rgb(255, 255, 85); font-weight: bold;">Infinity Lite<br></span><span style="color: rgb(255, 255, 255); font-weight: bold;">The Most Symmetrical Minecraft Server</span></h5> </div> --></div>
         </div>
-        <div class="col s12 m6 l6 server-status1">
+        <!--<div class="col s12 m6 l6 server-status1">
             <div class="card blue-grey darken-4 white-text">
                 <h4 style="" class="center server-online1 white-text">Loading Status</h4>
                 <h5 class="center">Server 2 [Whitelisted]<br>whitelist.ninebynine.us</h5>
@@ -134,9 +134,7 @@
                         <h5 class="playersall2">There are <span style="font-size:1em;" class="server-players1"></span> of <span style="font-size:1em;" class="server-max-players1">32</span> players online.</h5></li>
                 </ul>
                 <br>
-                <!-- <div class="card-action">
-                    <h5 class="center"><span class="server-motd1"></span></h5> </div> --></div>
-        </div>
+        </div>-->
         <!--<div class="col s12 m6 l4 offset-m3 server-status">
             <div class="card blue-grey darken-4 white-text">
                 <h4 style="" class="center server-online white-text">Loading Status</h4>
@@ -261,7 +259,7 @@
             $(document).ready(function() {
                 $.ajax({
                     crossOrigin: true,
-                    url: 'http://198.46.193.102:1234/players.json',
+                    url: 'http://198.46.193.111:1234/players.json',
                     dataType: "json",
                     context: {},
                     success: function(data) {
