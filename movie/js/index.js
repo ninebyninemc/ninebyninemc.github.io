@@ -51,7 +51,7 @@ function start() {
 
   var intro = document.getElementsByClassName("intro")[0];
 
-  var music = new Audio("../billnye2.mp3");
+  var music = new Audio("./billnye2.mp3");
 
   intro.className += " intro--hide";
 
